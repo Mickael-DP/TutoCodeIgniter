@@ -23,5 +23,26 @@ $config = array(
             'label' => 'Message',
             'rules' => 'required'
         )
+    ),
+
+    'site/connexion' => array(
+        array(
+            'field' => 'username',
+            'label' => "Nom d'utilisateur",
+            'rules' => 'required'
+        ), 
+        array(
+            'field' => 'password',
+            'label' => 'Mot de passe',
+            'rules' => 'required'
+        )
     )
 );
+
+
+
+$config['site/contact'][] = array(
+    'field' => 'emailconf',
+    'label' => 'Confirmation e-mail',
+    'rules' => array('valid_email', 'required', 'matches[email ]')
+  );

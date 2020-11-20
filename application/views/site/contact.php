@@ -19,6 +19,13 @@
       </div>
     </div>
     <div class="form-group">
+  <?= form_label("Confirmation e-mail&nbsp;:", "email", ['class' => "col-md-2 control-label "]) ?>
+  <div class="col-md-10 <?= empty( form_error('emailconf')) ?"" : "has-error" ?>">
+    <?= form_input(['name' => "emailconf", 'id' => "emailconf", 'type' => 'email', 'class' => 'form-control'], set_value('emailconf')) ?>
+    <span class="help-block"><?= form_error('emailconf'); ?></span>
+  </div>
+</div>
+    <div class="form-group">
       <?= form_label("Titre&nbsp;:", "title", ['class' => "col-md-2 control-label "]) ?>
       <div class="col-md-10 <?= empty( form_error('title')) ?'':'has-error' ?>">
         <?= form_input(['name' => "title", 'id' => "title", 'class' => 'form-control']) ?>
