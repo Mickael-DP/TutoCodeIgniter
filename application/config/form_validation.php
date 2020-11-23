@@ -36,6 +36,19 @@ $config = array(
             'label' => 'Mot de passe',
             'rules' => 'required'
         )
+        ),
+
+    'blog/edition' => array(
+        array(
+            'field' => 'title',
+            'label' => "Nom d'utilisateur",
+            'rules' => 'required'
+        ), 
+        array(
+            'field' => 'content',
+            'label' => 'Contenu',
+            'rules' => 'required'
+        )
     )
 );
 

@@ -100,7 +100,7 @@ class Site extends CI_Controller {
     }
     
 	
-	public function deconnexion() {
+	function deconnexion() {
         $this->auth_user->logout();
         redirect('index');
     }
